@@ -18,7 +18,7 @@ export class CdkDragDropConnectedSortingExample {
   ];
 
   done = [
-    'Get up',
+    'Get up late',
     'Brush teeth',
     'Take a shower',
     'Check e-mail',
