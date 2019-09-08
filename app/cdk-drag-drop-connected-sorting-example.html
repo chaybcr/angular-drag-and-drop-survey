@@ -5,26 +5,47 @@
     cdkDropList
     #todoList="cdkDropList"
     [cdkDropListData]="todo"
-    [cdkDropListConnectedTo]="[doneList]"
+    [cdkDropListConnectedTo]="[doneList,GoodList]"
     class="example-list"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    <div class="example-box" *ngFor="let item of todo" cdkDrag>
+      <img [src]="item" height="100" width="100">
+    </div>
   </div>
 </div>
 
 <div class="example-container">
-  <h2>Done</h2>
+  <h2>Excellent</h2>
 
   <div
     cdkDropList
     #doneList="cdkDropList"
     [cdkDropListData]="done"
-    [cdkDropListConnectedTo]="[todoList]"
+    [cdkDropListConnectedTo]="[todoList,GoodList]"
     class="example-list"
     (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    <div class="example-box" *ngFor="let item of done" cdkDrag>
+      <img [src]="item" height="100" width="100">
+    </div>
   </div>
 </div>
+
+<div class="example-container">
+  <h2>Good</h2>
+
+  <div
+    cdkDropList
+    #GoodList="cdkDropList"
+    [cdkDropListData]="Good"
+    [cdkDropListConnectedTo]="[todoList,doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of Good" cdkDrag>
+      <img [src]="item" height="100" width="100">
+    </div>
+  </div>
+</div>
+
 
 
 

@@ -11,18 +11,16 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class CdkDragDropConnectedSortingExample {
   todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
+       'https://www.gstatic.com/webp/gallery3/1.png',
+    'https://www.gstatic.com/webp/gallery3/2.png',
+    'https://www.gstatic.com/webp/gallery3/3.png'
   ];
 
   done = [
-    'Get up late',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+  
+  ];
+  Good=[
+
   ];
 
   drop(event: CdkDragDrop<string[]>) {
